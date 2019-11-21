@@ -26,11 +26,17 @@
 // variables
 /////
 
+const m = moment();
+
+
 /////
 // functions
 /////
 
 // function using moment.js to call in the date for the top of the page
+console.log(m.format("dddd, MMMM Do"));
+
+$("#currentDay").text(m.format("dddd, MMMM Do"));
 
 // dummy function that allows us to listen for clicks, knows which row the button is connected
 // to, and then saves that row to localStorage
@@ -39,6 +45,21 @@
 
 // function that knows what the current time is and highlights the current hour in green
 // also knows then to mark the next hour purple, updating CSS classes dynamically
+
+// testing out the box
+// var words = document.querySelector("#test").value;
+var words;
+
+
+$("#save").click(function(){
+    console.log("I hear a click");
+    console.log($("#test").val());
+
+    //may have issues with pulling it back out as it appears
+    //to be an object when being inspected
+    //so to combat that JSON stringify it
+    localStorage.setItem("test words", $("#test").val());
+});
 
 
 

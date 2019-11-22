@@ -43,6 +43,12 @@ textarea{
   border-top: 1px dashed #000000;
 }
 
+/* my class  */
+.input {
+  height: 50px;
+  width: 100%;
+}
+
 /* update these to the colors that I would like them to be  */
 .past {
   background-color: #d3d3d3;

@@ -38,6 +38,31 @@ console.log(m.format("dddd, MMMM Do"));
 
 $("#currentDay").text(m.format("dddd, MMMM Do"));
 
+// testing out the box
+// var words;
+// var saveWords = JSON.parse(localStorage.getItem("test words"));
+// console.log("saveWords: " + saveWords);
+// $("#test").empty();
+// $("#test").val(saveWords);
+var words;
+var saveWords = JSON.parse(localStorage.getItem("9 am"));
+$("#ninAm").empty();
+$("#nineAm").val(saveWords);
+
+// $("#save").click(function(){
+//     console.log("I hear a click");
+//     console.log($("#test").val());
+//     words = $("#test").val();
+//     localStorage.setItem("test words", JSON.stringify(words));
+//     console.log("words :" + words);
+//     saveWords = JSON.parse(localStorage.getItem("test words"));
+//     console.log(saveWords);
+// });
+$(".saveBtn").click(function(){
+    words = $("#nineAm").val();
+    localStorage.setItem("9 am", JSON.stringify(words));
+    saveWords = JSON.parse(localStorage.getItem("#nineAm"));
+});
 // dummy function that allows us to listen for clicks, knows which row the button is connected
 // to, and then saves that row to localStorage
 
@@ -46,29 +71,6 @@ $("#currentDay").text(m.format("dddd, MMMM Do"));
 // function that knows what the current time is and highlights the current hour in green
 // also knows then to mark the next hour purple, updating CSS classes dynamically
 
-// testing out the box
-// var words = document.querySelector("#test").value;
-var words;
-var saveWords = JSON.parse(localStorage.getItem("test words"));
-console.log("saveWords: " + saveWords);
-$("#test").empty();
-$("#test").val(saveWords);
-
-
-
-$("#save").click(function(){
-    console.log("I hear a click");
-    console.log($("#test").val());
-    words = $("#test").val();
-    localStorage.setItem("test words", JSON.stringify(words));
-    console.log("words :" + words);
-    saveWords = JSON.parse(localStorage.getItem("test words"));
-    console.log(saveWords);
-    //may have issues with pulling it back out as it appears
-    //to be an object when being inspected
-    //so to combat that JSON stringify it
-    // $("#test").html(saveWords);
-});
 
 
 

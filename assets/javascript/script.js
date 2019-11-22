@@ -22,33 +22,12 @@
 // * if line is current hour it is green and the line after it is purple
 // * else it is a light lavendar
 
-/////
-// variables
-/////
-
-const m = moment();
-
-
-/////
-// functions
-/////
-
-// function using moment.js to call in the date for the top of the page
-console.log(m.format("dddd, MMMM Do"));
-
-$("#currentDay").text(m.format("dddd, MMMM Do"));
-
 // testing out the box
 // var words;
 // var saveWords = JSON.parse(localStorage.getItem("test words"));
 // console.log("saveWords: " + saveWords);
 // $("#test").empty();
 // $("#test").val(saveWords);
-var words;
-var saveWords = JSON.parse(localStorage.getItem("9 am"));
-$("#ninAm").empty();
-$("#nineAm").val(saveWords);
-
 // $("#save").click(function(){
 //     console.log("I hear a click");
 //     console.log($("#test").val());
@@ -58,18 +37,54 @@ $("#nineAm").val(saveWords);
 //     saveWords = JSON.parse(localStorage.getItem("test words"));
 //     console.log(saveWords);
 // });
+
+/////
+// jumbotron area
+/////
+
+// variables
+
+const m = moment();
+
+// functions
+
+// function using moment.js to call in the date for the top of the page
+console.log(m.format("dddd, MMMM Do"));
+
+$("#currentDay").text(m.format("dddd, MMMM Do"));
+
+/////
+// dayplanner area
+/////
+
+// variables and what ifs
+
+var words;
+var saveWords = JSON.parse(localStorage.getItem("9 am"));
+$("#nineAm").val("");
+$("#nineAm").val(saveWords);
+
+// if that knows what the current time is and highlights the current hour
+// if current hour, else if current hour +1, else past hour color
+// is ran on each page refresh and each save?
+
+
+// functions
+
 $(".saveBtn").click(function(){
     words = $("#nineAm").val();
     localStorage.setItem("9 am", JSON.stringify(words));
     saveWords = JSON.parse(localStorage.getItem("#nineAm"));
 });
-// dummy function that allows us to listen for clicks, knows which row the button is connected
-// to, and then saves that row to localStorage
 
-// function to hear what is saved in the slot and runs the dummy function to save it
+// dummy function that allows us to save that row to localStorage
 
-// function that knows what the current time is and highlights the current hour in green
-// also knows then to mark the next hour purple, updating CSS classes dynamically
+// function that listen for clicks, knows which row the button is connected
+// to, and then runs the dummy function to save the information
+
+// dummy function that then is called by the first dummy function and prints the localStorage
+// informaiton to the page
+
 
 
 

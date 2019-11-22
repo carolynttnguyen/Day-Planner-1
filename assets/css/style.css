@@ -4,6 +4,7 @@ body {
   line-height: 1;
 }
 
+/* this is what they want us to use instead of input I believe  */
 textarea{
   background: transparent;
   border: none;
@@ -43,12 +44,6 @@ textarea{
   border-top: 1px dashed #000000;
 }
 
-/* my class  */
-.input {
-  height: 50px;
-  width: 100%;
-}
-
 /* update these to the colors that I would like them to be  */
 .past {
   background-color: #d3d3d3;
@@ -71,9 +66,19 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  /* height: 100%;
+  width: 100%; */
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+
+/* style set ups to block out where the row is */
+/* 
+#black {
+  background-color: black;
+} */
+

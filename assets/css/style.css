@@ -4,7 +4,6 @@ body {
   line-height: 1;
 }
 
-/* this is what they want us to use instead of input I believe  */
 textarea{
   background: transparent;
   border: none;
@@ -78,7 +77,4 @@ textarea{
 
 /* style set ups to block out where the row is */
 /* 
-#black {
-  background-color: black;
-} */
 

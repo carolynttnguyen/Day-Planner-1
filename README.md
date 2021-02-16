@@ -15,7 +15,7 @@ This week's project called for the creation of a simple calendar application tha
 
 * Site: https://missjody.github.io/Day-Planner/
 
-* Repository: https://github.com/missjody/Day-Planner
+* Repository: https://carolynttnguyen.github.io/Day-Planner-1/
 
 ## License
 
